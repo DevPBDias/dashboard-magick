@@ -8,6 +8,7 @@ interface OfferSourceProps {
   HandleInputs: () => void;
   ChangeSavedInputs: () => void;
   HandleSavedInputs: () => void;
+  RemoveSavedInputs: () => void;
   isDisabled: boolean;
   HandleSelect: () => void;
   showPlus: boolean;
@@ -50,6 +51,11 @@ export const OfferSourceProvider = ({
     setSavedInputs(!savedInputs);
   };
 
+  const RemoveSavedInputs = () => {
+    setSavedInputs(!savedInputs);
+    setShowPlus(!showPlus);
+  };
+
   return (
     <OfferSourceContext.Provider
       value={{
@@ -64,6 +70,7 @@ export const OfferSourceProvider = ({
         setShowPlus,
         hideEdit,
         setHideEdit,
+        RemoveSavedInputs,
       }}
     >
       {children}

@@ -1,4 +1,5 @@
 "use client";
+import OfferModal from "@/components/modals/offer";
 import ContainerInputs from "@/components/offers/ContainerInputs";
 import SavedInputs from "@/components/offers/SavedInputs";
 import { Button } from "@/components/ui/button";
@@ -29,6 +30,7 @@ const OffersSources = () => {
             </Button>
           )}
         </div>
+        <OfferModal />
         {savedInputs && <SavedInputs />}
         {showInputs && <ContainerInputs />}
       </section>

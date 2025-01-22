@@ -9,12 +9,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Edit, Plus, Save, Settings, X } from "lucide-react";
+import { Edit, Plus, Save, Settings, Trash, X } from "lucide-react";
 import { Switch } from "../ui/switch";
 import { useOfferSourceContext } from "@/context/offer-provider";
+import { useModalContext } from "@/context/modal-provider";
 
 const SavedInputs = () => {
-  const { hideEdit, isDisabled, HandleSelect } = useOfferSourceContext();
+  const { hideEdit, isDisabled, HandleSelect, RemoveSavedInputs } =
+    useOfferSourceContext();
+  const { callOfferModal, setCallOfferModal } = useModalContext();
 
   return (
     <section className="flex flex-col justify-center items-start gap-2 w-full">
@@ -45,10 +48,17 @@ const SavedInputs = () => {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <Button variant="outline" type="button">
+        <Button
+          variant="outline"
+          type="button"
+          onClick={() => setCallOfferModal(!callOfferModal)}
+        >
           <Settings />
         </Button>
         <Switch />
+        <Button variant="outline" type="button" onClick={RemoveSavedInputs}>
+          <Trash />
+        </Button>
       </div>
       <div>
         <Button variant="outline" type="button">

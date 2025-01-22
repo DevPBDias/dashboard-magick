@@ -9,6 +9,8 @@ interface ModalProps {
   setAccountModal: React.Dispatch<React.SetStateAction<boolean>>;
   callDeleteProject: boolean;
   setCallDeleteProject: React.Dispatch<React.SetStateAction<boolean>>;
+  callOfferModal: boolean;
+  setCallOfferModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const ModalContext = createContext<ModalProps | undefined>(undefined);
@@ -17,6 +19,7 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
   const [callModal, setCallModal] = useState(false);
   const [accountModal, setAccountModal] = useState(false);
   const [callDeleteProject, setCallDeleteProject] = useState(false);
+  const [callOfferModal, setCallOfferModal] = useState(false);
 
   return (
     <ModalContext.Provider
@@ -27,6 +30,8 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
         setAccountModal,
         callDeleteProject,
         setCallDeleteProject,
+        callOfferModal,
+        setCallOfferModal,
       }}
     >
       {children}
