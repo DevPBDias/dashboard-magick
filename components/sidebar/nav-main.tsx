@@ -16,13 +16,14 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 export function NavMain({
   items,
 }: {
   items: {
     title: string;
-    url: string;
+    url?: string;
     icon?: LucideIcon;
     isActive?: boolean;
     dropdown?: boolean;
@@ -52,10 +53,12 @@ export function NavMain({
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
               ) : (
-                <SidebarMenuButton tooltip={item.title}>
-                  {item.icon && <item.icon />}
-                  <span>{item.title}</span>
-                </SidebarMenuButton>
+                <a href={item.url}>
+                  <SidebarMenuButton tooltip={item.title}>
+                    {item.icon && <item.icon />}
+                    <span>{item.title}</span>
+                  </SidebarMenuButton>
+                </a>
               )}
               <CollapsibleContent>
                 <SidebarMenuSub>

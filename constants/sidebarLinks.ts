@@ -21,7 +21,6 @@ export const sidebarLinks = {
     },
     {
       title: "Projects",
-      url: "/",
       icon: Bot,
       items: [
         {
@@ -32,7 +31,6 @@ export const sidebarLinks = {
     },
     {
       title: "Settings",
-      url: "/",
       icon: Settings2,
       items: [
         {
