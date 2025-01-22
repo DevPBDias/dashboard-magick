@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import LayoutSidebar from "@/components/sidebar";
 import { ModalProvider } from "@/context/modal-provider";
+import { OfferSourceProvider } from "@/context/offer-provider";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -32,7 +33,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ModalProvider>
-            <LayoutSidebar>{children}</LayoutSidebar>
+            <OfferSourceProvider>
+              <LayoutSidebar>{children}</LayoutSidebar>
+            </OfferSourceProvider>
           </ModalProvider>
         </ThemeProvider>
       </body>
