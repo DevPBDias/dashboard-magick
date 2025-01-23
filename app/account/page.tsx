@@ -1,6 +1,7 @@
 import BillingCard from "@/components/account/BillingCard";
 import SessionCard from "@/components/account/SessionCard";
 import UserCard from "@/components/account/UserCard";
+import PlanPricesModal from "@/components/modals/account";
 import { HandMetal } from "lucide-react";
 import React from "react";
 
@@ -15,6 +16,7 @@ const AccountPage = () => {
         <SessionCard />
         <BillingCard />
       </section>
+      <PlanPricesModal />
     </main>
   );
 };

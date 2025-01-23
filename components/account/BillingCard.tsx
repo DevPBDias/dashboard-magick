@@ -9,8 +9,11 @@ import {
 } from "@/components/ui/card";
 import { Dot } from "lucide-react";
 import { Button } from "../ui/button";
+import { useModalContext } from "@/context/modal-provider";
 
 const BillingCard = () => {
+  const { callModal, setCallModal } = useModalContext();
+
   return (
     <Card className="flex flex-col justify-center items-start gap-8 w-full p-4">
       <CardHeader>
@@ -37,7 +40,7 @@ const BillingCard = () => {
         </div>
       </CardContent>
       <CardFooter>
-        <Button>Upgrade</Button>
+        <Button onClick={() => setCallModal(!callModal)}>Upgrade</Button>
       </CardFooter>
     </Card>
   );
