@@ -11,7 +11,7 @@ const selectOptions = [
 
 const Funnels = () => {
   return (
-    <main className="bg-sidebar m-4 p-4 rounded-md h-full flex flex-col justify-start items-start gap-8 dark:bg-muted/50">
+    <main className="bg-sidebar p-8 flex-1 flex flex-col justify-start items-start gap-8 dark:bg-muted/50 border-t-[1px] border-white/10">
       <ModalFunnels />
       <h4>Funnels</h4>
       <section className="flex flex-row justify-between items-center w-full">

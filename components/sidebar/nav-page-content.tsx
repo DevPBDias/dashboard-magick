@@ -8,16 +8,15 @@ const NavPageContent = () => {
   const { triggerLogo, setTriggerLogo } = useModalContext();
 
   return (
-    <div className="flex items-center justify-between w-full px-4">
-      <Button
-        variant="outline"
-        size="icon"
-        className="flex justify-center items-center"
+    <section className="flex items-center justify-between w-full px-4">
+      <div
+        className="flex justify-center items-center border-[1px] border-white/20 rounded-lg"
+        onClick={() => setTriggerLogo(!triggerLogo)}
       >
-        <SidebarTrigger onClick={() => setTriggerLogo(!triggerLogo)} />
-      </Button>
+        <SidebarTrigger />
+      </div>
       <ModeToggle />
-    </div>
+    </section>
   );
 };
 

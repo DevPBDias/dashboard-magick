@@ -11,7 +11,7 @@ const OffersSources = () => {
     useOfferSourceContext();
 
   return (
-    <main className="bg-sidebar m-4 p-4 rounded-md h-full flex flex-col justify-start items-start gap-4 dark:bg-muted/50">
+    <main className="bg-sidebar p-8 flex-1 flex flex-col justify-start items-start gap-4 dark:bg-muted/50 border-t-[1px] border-white/10">
       <div className="flex flex-row justify-start items-center gap-2">
         <BadgeDollarSign size={18} />
         <h4 className="text-lg">Offers Sources</h4>
