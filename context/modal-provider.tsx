@@ -13,6 +13,8 @@ interface ModalProps {
   setCallOfferModal: React.Dispatch<React.SetStateAction<boolean>>;
   triggerLogo: boolean;
   setTriggerLogo: React.Dispatch<React.SetStateAction<boolean>>;
+  showOffer: boolean;
+  setShowOffer: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const ModalContext = createContext<ModalProps | undefined>(undefined);
@@ -23,6 +25,7 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
   const [callDeleteProject, setCallDeleteProject] = useState(false);
   const [callOfferModal, setCallOfferModal] = useState(false);
   const [triggerLogo, setTriggerLogo] = useState(false);
+  const [showOffer, setShowOffer] = useState(false);
 
   return (
     <ModalContext.Provider
@@ -37,6 +40,8 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
         setCallOfferModal,
         triggerLogo,
         setTriggerLogo,
+        showOffer,
+        setShowOffer,
       }}
     >
       {children}

@@ -10,10 +10,10 @@ interface ContentProps {
 
 const OfferContent = ({ labelName, inputValue }: ContentProps) => {
   return (
-    <div className="flex flex-row w-full justify-between items-center gap-2">
-      <Label className="font-semibold">{labelName}:</Label>
+    <div className="flex flex-row justify-between items-center gap-3 w-full">
+      <Label className="font-semibold w-[500px]">{labelName}:</Label>
       <Input type="text" disabled value={inputValue} className="w-full" />
-      <Button type="button">
+      <Button type="button" className="ml-auto">
         <Copy />
       </Button>
     </div>

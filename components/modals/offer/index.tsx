@@ -9,12 +9,12 @@ const OfferModal = () => {
 
   return (
     <section
-      className={`absolute z-10 top-1/3 left-1/3 dark:bg-muted/50 border-[1px] border-black dark:border-none p-8 rounded-md w-[700px] ${
+      className={`absolute z-10 top-1/4 left-1/2 -translate-x-1/2 dark:bg-muted/50 border-[1px] border-black dark:border-none p-8 rounded-md w-1/2 ${
         callOfferModal ? "flex" : "hidden"
       } flex-col justify-center items-start w-fit gap-3`}
     >
       <h4 className="font-bold text-lg">Offer Source Details</h4>
-      <div className="flex flex-col justify-center items-start gap-4 w-full">
+      <div className="flex flex-col justify-between items-start gap-4 w-full">
         <OfferContent
           labelName="Conversion postback URL"
           inputValue="https://api-v2.magicktracker.com/api/cv/bg/e6af862d301b?subid={SUBID}&orderid={ORDERID}&amount={COMMISSION_AMOUNT}&subid2={SUBID2}&subid3={SUBID3}&subid4={SUBID4}&subid5={SUBID5}&conv_type={CONV_TYPE}&emailhash={EMAILHASH}"

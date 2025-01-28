@@ -2,7 +2,6 @@
 import { ModeToggle } from "@/components/theme/mode-toggle";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { useModalContext } from "@/context/modal-provider";
-import { Button } from "../ui/button";
 
 const NavPageContent = () => {
   const { triggerLogo, setTriggerLogo } = useModalContext();

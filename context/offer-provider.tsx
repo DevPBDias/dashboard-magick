@@ -13,6 +13,7 @@ interface OfferSourceProps {
   HandleSelect: () => void;
   showPlus: boolean;
   setShowPlus: React.Dispatch<React.SetStateAction<boolean>>;
+  setSavedInputs: React.Dispatch<React.SetStateAction<boolean>>;
   hideEdit: boolean;
   setHideEdit: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -71,6 +72,7 @@ export const OfferSourceProvider = ({
         hideEdit,
         setHideEdit,
         RemoveSavedInputs,
+        setSavedInputs,
       }}
     >
       {children}
