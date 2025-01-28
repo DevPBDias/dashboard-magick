@@ -1,14 +1,19 @@
-import Image, { StaticImageData } from "next/image";
-import React from "react";
+"use client";
+import Image from "next/image";
+import logoFull from "@/assets/logos/Logo_Name.png";
+import logoMinor from "@/assets/logos/Logo_Icon.png";
+import { useModalContext } from "@/context/modal-provider";
 
-interface LogoProps {
-  logo: StaticImageData;
-}
+const HeaderLogo = () => {
+  const { triggerLogo } = useModalContext();
 
-const HeaderLogo = ({ logo }: LogoProps) => {
   return (
     <picture>
-      <Image src={logo} alt="Logo" />
+      {!triggerLogo ? (
+        <Image src={logoFull} alt="Logo name" />
+      ) : (
+        <Image src={logoMinor} alt="Logo ICON" />
+      )}
     </picture>
   );
 };

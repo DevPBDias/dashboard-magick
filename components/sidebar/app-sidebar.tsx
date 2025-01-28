@@ -12,14 +12,13 @@ import {
 } from "@/components/ui/sidebar";
 import { sidebarLinks } from "@/constants/sidebarLinks";
 import HeaderLogo from "./header-logo";
-import logoFull from "@/assets/logos/Logo_Name.png";
 import NavProgess from "./nav-progress";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props}>
+    <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <HeaderLogo logo={logoFull} />
+        <HeaderLogo />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={sidebarLinks.navMain} />
