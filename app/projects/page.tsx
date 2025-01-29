@@ -5,7 +5,7 @@ import ContainerHeaderInfo from "@/components/main_content_dashboard/ContainerHe
 import ContainerMiddleInfo from "@/components/main_content_dashboard/ContainerMiddleInfo";
 import { SettingsProjectModal } from "@/components/modals/projects";
 import HeaderProjects from "@/components/projects/header";
-import { TableDemo } from "@/components/projects/Table";
+import { DataTableDemo } from "@/components/projects/Table";
 import UtmSelects from "@/components/projects/UtmSelects";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ const ProjectPage = () => {
       <ContainerMiddleInfo />
       <UtmSelects />
       {showGraphic && <ChartDashboard />}
-      <TableDemo />
+      <DataTableDemo />
     </main>
   );
 };
