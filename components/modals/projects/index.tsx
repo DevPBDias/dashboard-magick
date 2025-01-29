@@ -75,13 +75,6 @@ export function SettingsProjectModal() {
         <h4 className="text-lg">Project Settings</h4>
         <SelectFormField
           form={form.control}
-          fieldName="timezone"
-          labelName="Timezone:"
-          placeholder="Select a timezone"
-          values={valuesForm}
-        />
-        <SelectFormField
-          form={form.control}
           fieldName="currency"
           labelName="Currency:"
           placeholder="Select a currency"

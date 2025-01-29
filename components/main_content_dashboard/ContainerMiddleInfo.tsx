@@ -1,7 +1,7 @@
 import { dataVisitor, InfoVisitor } from "@/constants/infoVisitors";
 import VisitorCard from "./VisitorCard";
 
-const ContainerHeaderInfo = () => {
+const ContainerMiddleInfo = () => {
   return (
     <section className="w-full flex flex-row justify-between items-center gap-4">
       {dataVisitor.map((item: InfoVisitor) => (
@@ -11,4 +11,4 @@ const ContainerHeaderInfo = () => {
   );
 };
 
-export default ContainerHeaderInfo;
+export default ContainerMiddleInfo;
