@@ -18,7 +18,7 @@ const timezones = [
 export function SelectTimezone() {
   return (
     <Select>
-      <SelectTrigger className="w-[280px]">
+      <SelectTrigger className="w-full md:w-[280px]">
         <SelectValue placeholder="Selecione timezone" />
       </SelectTrigger>
       <SelectContent>

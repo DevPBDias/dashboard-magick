@@ -13,7 +13,7 @@ const ProjectPage = () => {
   const [showGraphic, setShowGraphic] = useState(false);
 
   return (
-    <main className="relative w-full p-8 dark:bg-muted/50 flex flex-1 flex-col gap-8">
+    <main className="relative w-full p-8 dark:bg-muted/50 flex flex-1 flex-col gap-8 border-t">
       <SettingsProjectModal />
       <HeaderProjects
         projectName="My projects"
