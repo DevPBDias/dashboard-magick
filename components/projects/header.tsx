@@ -21,9 +21,9 @@ const HeaderProjects = ({
   const { callModal, setCallModal } = useModalContext();
 
   return (
-    <header className="flex flex-row justify-between items-center w-full rounded-md">
-      <h3>{projectName}</h3>
-      <div className="flex flex-row justify-center items-center gap-6">
+    <header className="flex flex-col justify-start items-start gap-3 lg:flex-row lg:justify-between lg:items-center w-full rounded-md">
+      <h3 className="w-full text-lg font-bold">{projectName}</h3>
+      <div className="w-full flex flex-row justify-between lg:justify-end items-center gap-2 lg:gap-6">
         <div className="flex flex-row justify-center items-center gap-2">
           <Switch id="graphic-mode" onClick={() => setBtn(!btnGraphic)} />
           <Label htmlFor="graphic-mode">Show graphic</Label>

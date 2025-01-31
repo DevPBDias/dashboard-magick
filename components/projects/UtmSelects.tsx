@@ -9,7 +9,7 @@ const selectOptions = [
 
 const UtmSelects = () => {
   return (
-    <section className="w-full flex flex-row justify-between items-center gap-4">
+    <section className="w-full flex flex-row flex-wrap lg:justify-between items-start lg:items-center gap-4">
       <SelectProject
         data={selectOptions}
         labelName="UTM Source"

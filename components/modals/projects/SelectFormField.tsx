@@ -33,7 +33,7 @@ const SelectFormField = ({
       control={form}
       name={fieldName}
       render={({ field }) => (
-        <FormItem className="flex flex-row items-center justify-center gap-3">
+        <FormItem className="flex justify-center items-center flex-row mt-4 gap-3">
           <FormLabel className="text-base">{labelName}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>

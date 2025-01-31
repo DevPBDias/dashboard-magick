@@ -68,29 +68,31 @@ export function SettingsProjectModal() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={`absolute z-10 top-1/3 left-1/3 border-[1px] border-black dark:bg-muted/50 p-8 rounded-md ${
+        className={`absolute z-10 top-0 left-0 w-full h-screen border-[1px] border-black dark:bg-muted/50 rounded-md ${
           callModal ? "flex" : "hidden"
-        } flex-col justify-center items-start min-w-1/3 gap-3`}
+        } flex-col justify-start items-start gap-3`}
       >
-        <h4 className="text-lg">Project Settings</h4>
-        <SelectFormField
-          form={form.control}
-          fieldName="currency"
-          labelName="Currency:"
-          placeholder="Select a currency"
-          values={valuesForm}
-        />
-        <InputFormField
-          form={form.control}
-          fieldName="domain"
-          labelName="Domain:"
-          placeholder="teste.com"
-          btnName="Editar"
-        />
-        <VerifyBtn />
-        <div className="w-full flex flex-row justify-end items-center gap-4">
-          <CloseBtn />
-          <SubmitBtn loading={loading} />
+        <div className="bg-black w-full lg:w-[500px] flex flex-col justify-center items-start px-4 py-6 gap-4 m-auto rounded-md">
+          <h4 className="text-lg">Project Settings</h4>
+          <SelectFormField
+            form={form.control}
+            fieldName="currency"
+            labelName="Currency:"
+            placeholder="Select a currency"
+            values={valuesForm}
+          />
+          <InputFormField
+            form={form.control}
+            fieldName="domain"
+            labelName="Domain:"
+            placeholder="teste.com"
+            btnName="Editar"
+          />
+          <VerifyBtn />
+          <div className="w-full flex flex-row justify-end items-center gap-4">
+            <CloseBtn />
+            <SubmitBtn loading={loading} />
+          </div>
         </div>
       </form>
     </Form>
