@@ -7,7 +7,7 @@ const ContainerCollapsible = () => {
   const [isOpenTiktok, setIsOpenTiktok] = useState(false);
 
   return (
-    <section className="flex flex-col justify-center items-center gap-6 px-24 w-full">
+    <section className="flex flex-col justify-center items-center gap-4 lg:gap-6 2xl:px-12 w-full">
       <CollapsibleMedia
         media="Facebook"
         state={isOpenFacebook}
