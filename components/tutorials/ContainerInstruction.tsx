@@ -5,7 +5,7 @@ import { instructions } from "@/constants/tutorialLinks";
 
 const ContainerInstruction = () => {
   return (
-    <section className="flex flex-col gap-3 border p-2 min-w-fit h-full">
+    <section className="flex flex-col gap-3 p-2 min-w-fit h-full">
       <h4 className="border-b-2 dark:border-white/30 py-2 text-xl font-bold">
         Instruções do app
       </h4>
