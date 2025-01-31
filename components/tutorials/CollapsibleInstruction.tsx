@@ -4,7 +4,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { File, Plus } from "lucide-react";
+import { File, Minus, Plus } from "lucide-react";
 import { useState } from "react";
 
 interface MediaProps {
@@ -19,9 +19,9 @@ const CollapsibleInstruction = ({ title, links }: MediaProps) => {
     <Collapsible open={open} onOpenChange={setOpen} className="w-full">
       <CollapsibleTrigger className="w-full flex flex-row justify-start items-center p-2 gap-4 hover:underline hover:cursor-pointer">
         <div className="border dark:border-white/60 border-black/60">
-          <Plus size={12} />
+          {open ? <Minus size={12} /> : <Plus size={12} />}
         </div>
-        <p>
+        <p className="text-left font-semibold">
           {links.id}. {title}
         </p>
       </CollapsibleTrigger>
