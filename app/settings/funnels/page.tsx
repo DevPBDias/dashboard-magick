@@ -11,9 +11,9 @@ const selectOptions = [
 
 const Funnels = () => {
   return (
-    <main className="bg-sidebar p-8 flex-1 flex flex-col justify-start items-start gap-8 dark:bg-muted/50 border-t-[1px] border-white/10">
+    <main className="bg-sidebar p-4 lg:p-8 flex-1 flex flex-col justify-start items-start gap-8 dark:bg-muted/50 border-t-[1px] border-white/10">
       <ModalFunnels />
-      <h4>Funnels</h4>
+      <h4 className="text-lg font-bold">Funnels</h4>
       <section className="flex flex-row justify-between items-center w-full">
         <div className="flex flex-col justify-start items-start gap-8">
           <section className="flex flex-col justify-center items-end gap-8 w-full">
@@ -36,8 +36,8 @@ const Funnels = () => {
               data={selectOptions}
             />
           </section>
-          <section className="flex flex-row justify-center items-start gap-2">
-            <h4>Actions:</h4>
+          <section className="flex flex-col lg:flex-row justify-center items-start gap-3 w-full">
+            <h4 className="text-base font-semibold">Actions:</h4>
             <div className="flex flex-col justify-center items-center gap-4 w-full">
               <ContainerInputAction />
               <ContainerInputAction />
