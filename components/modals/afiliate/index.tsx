@@ -11,19 +11,18 @@ const AfiliateModal = () => {
     <main
       className={`${
         callModal ? "flex" : "hidden"
-      } absolute z-10 top-0 left-1/2 w-3/4 max-h-full -translate-x-1/2 dark:bg-black p-8 rounded-md flex-col justify-start items-start gap-4`}
+      } absolute z-10 top-0 left-0 w-full h-full dark:bg-muted/50 rounded-md flex-col justify-start items-start lg:items-center`}
     >
-      <div className="flex flex-row w-full justify-between items-center dark:bg-black">
-        <h4 className="text-2xl">New Affiliate Network</h4>
-        <Button
-          className="flex flex-row justify-center items-center p-2"
-          onClick={() => setCallModal(!callModal)}
-        >
-          <X />
-        </Button>
+      <div className="flex flex-col w-full lg:w-3/4 justify-start items-start bg-black p-3 gap-4">
+        <div className="flex flex-row w-full justify-between items-center dark:bg-black">
+          <h4 className="text-xl font-bold">New Affiliate Network</h4>
+          <Button onClick={() => setCallModal(!callModal)}>
+            <X size={14} />
+          </Button>
+        </div>
+        <SearchForm />
+        <AfiliateCard />
       </div>
-      <SearchForm />
-      <AfiliateCard />
     </main>
   );
 };

@@ -21,7 +21,7 @@ const SavedInputs = () => {
 
   return (
     <section className="flex flex-col justify-center items-start gap-2 w-full">
-      <div className="flex flex-row justify-start items-center gap-2 w-full">
+      <div className="flex flex-col lg:flex-row justify-start items-start lg:items-center gap-2 w-full">
         <Select disabled={isDisabled}>
           <SelectTrigger className="w-[250px]">
             <SelectValue placeholder="Select project" />
@@ -48,19 +48,21 @@ const SavedInputs = () => {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <Button
-          variant="outline"
-          type="button"
-          onClick={() => setCallOfferModal(!callOfferModal)}
-        >
-          <Settings />
-        </Button>
-        <Switch />
-        <Button variant="outline" type="button" onClick={RemoveSavedInputs}>
-          <Trash />
-        </Button>
+        <div className="flex flex-row justify-start items-center w-full gap-3">
+          <Button
+            variant="outline"
+            type="button"
+            onClick={() => setCallOfferModal(!callOfferModal)}
+          >
+            <Settings />
+          </Button>
+          <Switch />
+          <Button variant="outline" type="button" onClick={RemoveSavedInputs}>
+            <Trash />
+          </Button>
+        </div>
       </div>
-      <div>
+      <div className="flex flex-row justify-start items-center w-full gap-3">
         <Button variant="outline" type="button">
           <Plus />
         </Button>

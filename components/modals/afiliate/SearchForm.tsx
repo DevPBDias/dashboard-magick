@@ -44,7 +44,7 @@ export function SearchForm() {
             <FormItem>
               <FormControl>
                 <Input
-                  className="w-80 pl-10"
+                  className="w-72 lg:w-80 pl-10"
                   type="text"
                   placeholder="Search"
                   {...field}
@@ -54,7 +54,7 @@ export function SearchForm() {
             </FormItem>
           )}
         />
-        <Search size={20} className="absolute top-2 left-2" />
+        <Search size={20} className="absolute z-20 top-2 left-2" />
       </form>
     </Form>
   );

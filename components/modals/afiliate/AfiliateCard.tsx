@@ -31,7 +31,7 @@ const AfiliateCard = () => {
   const { setSavedInputs, savedInputs } = useOfferSourceContext();
 
   return (
-    <section className="grid grid-cols-4 gap-4 w-full">
+    <section className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 w-full">
       <Button
         variant="secondary"
         className="border rounded-lg shadow-lg flex flex-row justify-center items-center w-full py-12 gap-3 border-dashed h-full"

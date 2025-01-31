@@ -10,7 +10,7 @@ const OfferModalBtns = () => {
       type="button"
       variant="outline"
       onClick={() => setCallOfferModal(!callOfferModal)}
-      className="ml-auto"
+      className="md:ml-auto"
     >
       Close
     </Button>
